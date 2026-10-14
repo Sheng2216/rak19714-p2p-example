@@ -1,0 +1,4 @@
+# pyusb talks to libusb. Install the system libusb-1.0 library as well.
+# LoRaRF is vendored in third_party/LoRaRF. Do not pip install LoRaRF:
+# the PyPI 1.4.0 release is an older API (begin(bus)) and will shadow this tree.
+pyusb>=1.2.1
