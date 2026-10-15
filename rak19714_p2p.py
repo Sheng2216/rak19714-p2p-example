@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 # RAK19714 Linux P2P example: SX1262 LoRa TX/RX over the CH341 USB bridge.
 # Copyright (C) 2026 RAK19714 P2P example authors
 #
@@ -63,6 +64,8 @@ datasheet value. LoRaWAN public networks use ``0x3444``.
 """
 
 from __future__ import annotations
+
+__version__ = "0.0.1"
 
 import argparse
 import os
@@ -191,6 +194,11 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="RAK19714 (CH341) SX1262 P2P LoRa TX / RX",
         formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    p.add_argument(
+        "-V", "--version",
+        action="version",
+        version=f"%(prog)s {__version__}",
     )
     p.add_argument("mode", choices=("tx", "rx"),
                    help="tx = send one packet then exit; rx = listen and print packets")
