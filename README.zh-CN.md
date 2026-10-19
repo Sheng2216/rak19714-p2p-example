@@ -1,6 +1,6 @@
 # RAK19714 P2P 示例
 
-该示例展示了如何在主机设备（`x86_64` / `aarch64`）上通过 [RAK19714](https://store.rakwireless.com/products/rak19714-lorawan-mini-pcie-module) 收发 LoRa P2P 数据包。
+该示例展示了如何在主机设备（`x86_64` / `aarch64`）上通过 [RAK19714](https://store.rakwireless.com/products/wismesh-gateway-card) 收发 LoRa P2P 数据包。
 
 RAK19714 板载一颗 WCH CH341 USB bridge芯片，后端接 Semtech SX1262。脚本通过 `pyusb`（底层调用 `libusb-1.0`）直接向 USB 设备 `1a86:5512` 发送 CH341 的 SPI/GPIO 控制流来读写 SX1262。
 

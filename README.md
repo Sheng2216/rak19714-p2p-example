@@ -1,6 +1,6 @@
 # RAK19714 P2P Example
 
-This example shows how to send and receive LoRa P2P packets on a host device (`x86_64` / `aarch64`) using the [RAK19714](https://store.rakwireless.com/products/rak19714-lorawan-mini-pcie-module).
+This example shows how to send and receive LoRa P2P packets on a host device (`x86_64` / `aarch64`) using the [RAK19714](https://store.rakwireless.com/products/wismesh-gateway-card).
 
 The RAK19714 integrates an onboard WCH CH341 USB bridge chip connected to a Semtech SX1262 radio. The script uses `pyusb` (backed by `libusb-1.0`) to send CH341 SPI/GPIO control streams directly to USB device `1a86:5512` to read and write the SX1262.
 
